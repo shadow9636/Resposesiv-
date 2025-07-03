@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+}
+
+header {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.grid-container {
+  columns: 5 200px;
+  column-gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  break-inside: avoid;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card .info {
+  padding: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #e60023;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #c4001c;
+}
+
+/* ✅ Responsive Design */
+
+@media (max-width: 1024px) {
+  .grid-container {
+    columns: 3 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    columns: 2 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    columns: 1 100%;
+    padding: 10px;
+  }
+
+  .card button {
+    width: 100%;
+  }
